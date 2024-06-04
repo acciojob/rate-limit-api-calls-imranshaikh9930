@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const  fetchButton = document.getElementById("fetch-button");
 const  clickCountDisplay = document.getElementById("click-count");
 const  resultsDiv = document.getElementById("results");
@@ -26,7 +25,7 @@ async function fetchData() {
   fetch("https://jsonplaceholder.typicode.com/todos/1")
     .then((response) => response.json())
     .then((data) => {
-      p.textContent = JSON.stringify(data);
+      p.textContent = `ID:${data.id},Title:${data.title},Completed:${data.completed}`;
 
       resultsDiv.appendChild(p);
     })
